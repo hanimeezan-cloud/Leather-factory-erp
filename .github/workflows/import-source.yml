@@ -1,0 +1,50 @@
+name: Import Leather Factory ERP source
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  import-source:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Decode and extract source
+        shell: bash
+        run: |
+          base64 --decode source.zip.b64 > source.zip
+          python3 - <<'PY'
+          import pathlib
+          import zipfile
+
+          root = pathlib.Path(".").resolve()
+          with zipfile.ZipFile("source.zip") as archive:
+              for member in archive.infolist():
+                  normalized = member.filename.replace("\\", "/").lstrip("/")
+                  if not normalized:
+                      continue
+                  target = (root / normalized).resolve()
+                  if target != root and root not in target.parents:
+                      raise RuntimeError(f"Unsafe archive path: {member.filename}")
+                  if member.is_dir():
+                      target.mkdir(parents=True, exist_ok=True)
+                      continue
+                  target.parent.mkdir(parents=True, exist_ok=True)
+                  target.write_bytes(archive.read(member))
+          PY
+          rm -f source.zip source.zip.b64 .github/workflows/import-source.yml
+
+      - name: Commit application source
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Add Leather Factory ERP application"
+          git push
