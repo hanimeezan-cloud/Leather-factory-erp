@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="360" viewBox="0 0 520 360">
+  <defs>
+    <filter id="paper-noise" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.021 0.068" numOctaves="3" seed="17" result="noise" />
+      <feColorMatrix
+        in="noise"
+        values="0 0 0 0 0.31
+                0 0 0 0 0.23
+                0 0 0 0 0.14
+                0.34 0 0 0 -0.1"
+      />
+    </filter>
+    <filter id="soft-crease" x="-10%" y="-20%" width="120%" height="140%">
+      <feGaussianBlur stdDeviation="0.7" />
+    </filter>
+  </defs>
+
+  <rect width="520" height="360" fill="#7b5c3c" opacity="0.34" filter="url(#paper-noise)" />
+
+  <g fill="none" stroke-linecap="round" filter="url(#soft-crease)">
+    <path d="M-18 74 C72 58 128 92 211 74 S367 47 548 83" stroke="#76563b" stroke-width="2.2" opacity="0.18" />
+    <path d="M-15 71 C72 55 132 89 214 71 S371 44 548 80" stroke="#fff8df" stroke-width="1.1" opacity="0.22" />
+    <path d="M76 -14 C95 57 69 112 92 178 S134 294 111 383" stroke="#715036" stroke-width="2" opacity="0.16" />
+    <path d="M73 -14 C92 57 66 111 89 178 S131 294 108 383" stroke="#fff9e8" stroke-width="1" opacity="0.2" />
+    <path d="M487 -8 C454 53 476 108 446 166 S405 280 426 374" stroke="#735238" stroke-width="2.4" opacity="0.17" />
+    <path d="M484 -8 C451 53 473 108 443 166 S402 280 423 374" stroke="#fff8e2" stroke-width="1.1" opacity="0.21" />
+    <path d="M-25 292 C88 276 170 313 274 286 S432 265 550 307" stroke="#79593d" stroke-width="2.1" opacity="0.15" />
+    <path d="M-22 289 C88 273 172 310 276 283 S434 262 550 304" stroke="#fff9e6" stroke-width="1" opacity="0.2" />
+    <path d="M214 -10 C237 77 206 130 230 205 S290 302 275 374" stroke="#6f4e34" stroke-width="1.5" opacity="0.11" />
+    <path d="M211 -10 C234 77 203 130 227 205 S287 302 272 374" stroke="#fff9e8" stroke-width="0.9" opacity="0.16" />
+  </g>
+
+  <g fill="none" stroke="#68492f" stroke-linecap="round" opacity="0.12">
+    <path d="M38 32 l43 5 M141 29 l58 -3 M316 42 l67 8 M415 118 l56 -5" />
+    <path d="M24 215 l51 -7 M161 234 l63 4 M318 222 l48 -8 M405 333 l72 3" />
+    <path d="M126 104 l2 39 M347 91 l-4 47 M187 305 l6 33 M389 251 l-2 31" />
+  </g>
+</svg>

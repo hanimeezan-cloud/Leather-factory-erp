@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480">
+  <defs>
+    <filter id="fine-grain" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.052 0.11" numOctaves="3" seed="29" result="fine" />
+      <feColorMatrix
+        in="fine"
+        values="0 0 0 0 0.24
+                0 0 0 0 0.11
+                0 0 0 0 0.045
+                0.75 0 0 0 -0.25"
+      />
+    </filter>
+    <filter id="soft-grain" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="turbulence" baseFrequency="0.018 0.035" numOctaves="2" seed="7" result="soft" />
+      <feColorMatrix
+        in="soft"
+        values="0 0 0 0 0.95
+                0 0 0 0 0.67
+                0 0 0 0 0.39
+                0.45 0 0 0 -0.14"
+      />
+    </filter>
+  </defs>
+
+  <rect width="640" height="480" fill="#4a2110" opacity="0.72" filter="url(#fine-grain)" />
+  <rect width="640" height="480" fill="#f0bd78" opacity="0.3" filter="url(#soft-grain)" />
+
+  <g fill="#5b2914" opacity="0.28">
+    <ellipse cx="31" cy="54" rx="2.2" ry="1.2" transform="rotate(-18 31 54)" />
+    <ellipse cx="88" cy="119" rx="3" ry="1.1" transform="rotate(24 88 119)" />
+    <ellipse cx="143" cy="34" rx="1.6" ry="2.6" transform="rotate(11 143 34)" />
+    <ellipse cx="207" cy="183" rx="3.3" ry="1.2" transform="rotate(-27 207 183)" />
+    <ellipse cx="274" cy="77" rx="2.4" ry="1.1" transform="rotate(39 274 77)" />
+    <ellipse cx="338" cy="141" rx="1.5" ry="2.8" transform="rotate(-9 338 141)" />
+    <ellipse cx="414" cy="43" rx="3.5" ry="1.2" transform="rotate(17 414 43)" />
+    <ellipse cx="481" cy="206" rx="2.8" ry="1.1" transform="rotate(-32 481 206)" />
+    <ellipse cx="557" cy="92" rx="1.7" ry="2.7" transform="rotate(14 557 92)" />
+    <ellipse cx="611" cy="165" rx="3.1" ry="1.2" transform="rotate(29 611 165)" />
+    <ellipse cx="54" cy="278" rx="3.4" ry="1.1" transform="rotate(-21 54 278)" />
+    <ellipse cx="122" cy="386" rx="1.6" ry="2.9" transform="rotate(8 122 386)" />
+    <ellipse cx="194" cy="309" rx="2.7" ry="1.1" transform="rotate(36 194 309)" />
+    <ellipse cx="252" cy="443" rx="3.3" ry="1.3" transform="rotate(-15 252 443)" />
+    <ellipse cx="329" cy="351" rx="1.8" ry="2.6" transform="rotate(19 329 351)" />
+    <ellipse cx="397" cy="424" rx="2.8" ry="1.1" transform="rotate(-34 397 424)" />
+    <ellipse cx="469" cy="297" rx="3.4" ry="1.2" transform="rotate(13 469 297)" />
+    <ellipse cx="535" cy="399" rx="1.6" ry="2.7" transform="rotate(-11 535 399)" />
+    <ellipse cx="603" cy="334" rx="3" ry="1.2" transform="rotate(25 603 334)" />
+  </g>
+
+  <g fill="#3f1b0d" opacity="0.34">
+    <circle cx="18" cy="188" r="1.1" />
+    <circle cx="47" cy="23" r="0.8" />
+    <circle cx="69" cy="207" r="1.5" />
+    <circle cx="103" cy="63" r="1.1" />
+    <circle cx="126" cy="153" r="0.7" />
+    <circle cx="158" cy="221" r="1.3" />
+    <circle cx="181" cy="91" r="0.9" />
+    <circle cx="225" cy="46" r="1.4" />
+    <circle cx="247" cy="132" r="0.8" />
+    <circle cx="291" cy="196" r="1.2" />
+    <circle cx="319" cy="27" r="0.7" />
+    <circle cx="356" cy="102" r="1.5" />
+    <circle cx="383" cy="187" r="0.9" />
+    <circle cx="431" cy="82" r="1.2" />
+    <circle cx="454" cy="151" r="0.7" />
+    <circle cx="502" cy="31" r="1.4" />
+    <circle cx="527" cy="143" r="0.9" />
+    <circle cx="574" cy="222" r="1.3" />
+    <circle cx="621" cy="57" r="0.8" />
+    <circle cx="25" cy="342" r="1.4" />
+    <circle cx="78" cy="431" r="0.8" />
+    <circle cx="109" cy="302" r="1.1" />
+    <circle cx="151" cy="457" r="1.5" />
+    <circle cx="176" cy="366" r="0.7" />
+    <circle cx="217" cy="272" r="1.3" />
+    <circle cx="268" cy="381" r="0.9" />
+    <circle cx="303" cy="459" r="1.2" />
+    <circle cx="348" cy="284" r="0.8" />
+    <circle cx="379" cy="392" r="1.4" />
+    <circle cx="425" cy="247" r="0.7" />
+    <circle cx="458" cy="361" r="1.3" />
+    <circle cx="493" cy="466" r="0.9" />
+    <circle cx="548" cy="281" r="1.5" />
+    <circle cx="587" cy="448" r="0.8" />
+    <circle cx="628" cy="377" r="1.2" />
+  </g>
+
+  <g fill="#f6c987" opacity="0.3">
+    <circle cx="42" cy="137" r="1.2" />
+    <circle cx="116" cy="25" r="0.9" />
+    <circle cx="173" cy="174" r="1.3" />
+    <circle cx="236" cy="104" r="0.8" />
+    <circle cx="307" cy="161" r="1.1" />
+    <circle cx="371" cy="53" r="1.4" />
+    <circle cx="439" cy="211" r="0.8" />
+    <circle cx="516" cy="79" r="1.2" />
+    <circle cx="592" cy="187" r="0.9" />
+    <circle cx="57" cy="391" r="1.1" />
+    <circle cx="135" cy="326" r="0.8" />
+    <circle cx="203" cy="419" r="1.4" />
+    <circle cx="286" cy="249" r="0.9" />
+    <circle cx="340" cy="435" r="1.2" />
+    <circle cx="409" cy="318" r="0.8" />
+    <circle cx="478" cy="437" r="1.3" />
+    <circle cx="531" cy="348" r="0.9" />
+    <circle cx="612" cy="291" r="1.2" />
+  </g>
+
+  <g fill="none" stroke="#f3c98c" stroke-linecap="round" opacity="0.2">
+    <path d="M18 159 q38 -13 77 1 M163 246 q42 12 87 -2 M302 259 q34 -11 72 3" />
+    <path d="M421 127 q42 11 86 -4 M518 271 q43 -12 91 5 M45 448 q40 -9 82 2" />
+  </g>
+</svg>
